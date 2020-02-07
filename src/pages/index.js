@@ -13,9 +13,9 @@ export default ({ data }) => {
         <h1>Miroslav's Thoughts</h1>
         {posts.map(({ node }) => (
           <Link key={node.id} to={node.fields.slug}>
-            <span>
+            <h2>
               {node.frontmatter.title} - {node.frontmatter.date}{" "}
-            </span>
+            </h2>
             <p>{node.excerpt}</p>
           </Link>
         ))}
